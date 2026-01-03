@@ -40,6 +40,4 @@ public class Restaurant {
     @Getter @Setter
     private double dairyRating;
 
-
-
 }
