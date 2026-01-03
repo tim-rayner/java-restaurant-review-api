@@ -8,7 +8,6 @@ import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
-
 @Entity
 @Table(name="DINING_REVIEWS")
 public class DiningReview {
@@ -40,4 +39,8 @@ public class DiningReview {
     @Column(name="COMMENT", nullable = true)
     @Getter @Setter
     private String comment;
+
+    @Column(name="REVIEW_STATUS")
+    @Getter @Setter
+    private ReviewStatus reviewStatus;
 }

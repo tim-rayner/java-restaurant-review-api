@@ -16,6 +16,10 @@ public class Restaurant {
     @Getter @Setter
     private Long id;
 
+    @Column(name="POST_CODE")
+    @Getter @Setter
+    private String postCode;
+
     @Column(name="NAME")
     @Getter @Setter
     private String name;
