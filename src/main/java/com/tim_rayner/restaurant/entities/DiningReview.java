@@ -10,7 +10,7 @@ import lombok.Setter;
 
 
 @Entity
-@Table(name="DINING_REVIEW")
+@Table(name="DINING_REVIEWS")
 public class DiningReview {
     @Id
     @GeneratedValue
