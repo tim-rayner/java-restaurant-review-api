@@ -1,5 +1,7 @@
 package com.tim_rayner.restaurant.entities;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -8,14 +10,13 @@ import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
-
-
 @Entity
 @Table(name="USERS")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class User {
     @Id
     @GeneratedValue
-    private long Id;
+    private Long id;
 
     @Column(name="USERNAME", unique = true)
     @Getter @Setter

@@ -1,5 +1,7 @@
 package com.tim_rayner.restaurant.entities;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,6 +12,7 @@ import lombok.Setter;
 
 @Entity
 @Table(name="RESTAURANTS")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Restaurant {
     @Id
     @GeneratedValue
@@ -30,18 +33,18 @@ public class Restaurant {
 
     @Column(name="OVERALL_RATING")
     @Getter @Setter
-    private double overallRating;
+    private Double overallRating;
 
     @Column(name="PEANUT_RATING")
     @Getter @Setter
-    private double peanutRating;
+    private Double peanutRating;
 
     @Column(name="EGG_RATING")
     @Getter @Setter
-    private double eggRating;
+    private Double eggRating;
 
     @Column(name="DAIRY_RATING")
     @Getter @Setter
-    private double dairyRating;
+    private Double dairyRating;
 
 }

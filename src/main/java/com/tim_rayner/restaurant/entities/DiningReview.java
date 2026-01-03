@@ -1,5 +1,7 @@
 package com.tim_rayner.restaurant.entities;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,6 +12,7 @@ import lombok.Setter;
 
 @Entity
 @Table(name="DINING_REVIEWS")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class DiningReview {
     @Id
     @GeneratedValue
